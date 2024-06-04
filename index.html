@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Cryptocurrency Data</title>
+     <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+     <div class="container">
+          <form id="search-form" onsubmit="event.preventDefault(); searchData();">
+               <input type="text" id="search-input" class="input-field" placeholder="Search By Name or Symbol">
+               <button type="submit" class="button">Search</button>
+               <button type="button" class="button" onclick="sortData('market_cap')">Sort By Mkt Cap</button>
+               <button type="button" class="button" onclick="sortData('percentage_change')">Sort by percentage</button>
+          </form>
+          <table id="data-table">
+               <thead>
+                    <tr>
+                         <th>Name</th>
+                         <th>Symbol</th>
+                         <th>Current Price</th>
+                         <th>Total Volume</th>
+                         <th>Percentage Change</th>
+                         <th>Market Cap</th>
+                    </tr>
+               </thead>
+               <tbody></tbody>
+          </table>
+     </div>
+     <script src="script.js"></script>
+</body>
+
+</html>
